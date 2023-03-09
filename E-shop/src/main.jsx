@@ -6,13 +6,14 @@ import App from './App'
 const colors = {
   brand: {
     1: "#000",
-    2: "#000"
+    2: "#000",
+    mybackground: "#EBEBEB" 
   }
 }
 
 const fonts = {
-  body: 'Montserrat',
-  heading: 'Roboto'
+  body: 'Montserrat, sans-serif',
+  heading: 'Roboto, sans-serif'
 }
 
 const theme = extendTheme({colors, fonts})
