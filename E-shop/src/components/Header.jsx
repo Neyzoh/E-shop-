@@ -1,34 +1,33 @@
-import { Box, Button, Flex, Heading, Popover, PopoverArrow, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Portal, Stack } from "@chakra-ui/react";
-import { AiFillShopping } from 'react-icons/ai'
+import { Box, Button, ButtonGroup, Flex, Heading, Popover, PopoverArrow, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Portal, Stack } from "@chakra-ui/react";
+
 function Header () {
     return(
         <Box p={8}>
             <Flex w="100%">
                 <Heading 
-                    ml="8" size="md" fontWeight='light' fontSize="3xl" fontFamily="heading" color='#000'>E-shop
+                    ml="180px" size="md" fontWeight='bold' fontSize="2xl" fontFamily="heading" color='#9331DD'>PurchasePro
                 </Heading>
-                <Stack  ml="100px" direction='row' spacing="4em" align='center'>
-                    <Button colorScheme='purple'variant='solid'>Accueil</Button>
-                    <Button colorScheme='black' variant='link'>Boutique</Button>
-                    <Button colorScheme='black' variant='link'>Nouveautés</Button>
-                    <Button colorScheme='black' variant='link'>Promotions</Button>
+                <Stack  ml="480px" position="relative" direction='row' spacing="4em" align='center'>
+                    <Button colorScheme='purple'variant='outline'>Accueil</Button>
+                    <Button colorScheme='black' variant='link'>Experts</Button>
+                    <Button colorScheme='black' variant='link'>FAQ</Button>
                 </Stack>
-                <Stack spacing={5} ml="auto" direction="row" align="center">
+                <Stack  ml="400px" align="center">
                     <Popover>
                         <PopoverTrigger>
-                            <Button colorScheme='orange'variant='solid'>S'inscrire</Button>
+                            <Button colorScheme='purple'variant='solid'>Connexion</Button>
                         </PopoverTrigger>
                         <Portal>
-                            <PopoverContent pt={4} bg="#60656F">
+                            <PopoverContent pb={4} pt={4} bg="#F7F7FF">
                                 <PopoverArrow />
-                                <PopoverCloseButton />
-                                <PopoverHeader>Enregistrez vos articles préférés</PopoverHeader>
-                                <Button colorScheme='yellow'variant='solid'>Se connecter</Button>
-                                <Button colorScheme='blue'variant='solid'>S'inscrire</Button>
+                                <PopoverCloseButton color='black'/>
+                                <ButtonGroup p={4}>
+                                    <Button colorScheme='purple'variant='outline'>Connexion</Button>
+                                    <Button colorScheme='purple'variant='solid'>Créer un compte</Button>
+                                </ButtonGroup>
                             </PopoverContent>
                         </Portal>
                     </Popover>
-                    <Button rightIcon={<AiFillShopping />} colorScheme='black'variant='outline' mr="1px">Panier</Button>
                 </Stack>
             </Flex>
         </Box>
