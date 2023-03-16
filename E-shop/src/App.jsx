@@ -1,13 +1,21 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom';
 import  Header  from './components/Header';
-import LandingLayout from './components/LandingLayout';
+import Home from './components/Home';
+import SignUpExpert from './components/SignUp/SignUpExpert';
+import SignUpUser from './components/SignUp/SignUpUser';
+
 
 function App() {
 
   return (
     <div className="App">
       <Header />
-      <LandingLayout />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Inscription-User' element={<SignUpUser />}/>
+        <Route path='/Inscription-Expert' element={<SignUpExpert />}/>
+      </Routes>
     </div>
   )
 }
